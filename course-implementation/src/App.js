@@ -1,7 +1,11 @@
+import AddUser from './components/Users/AddUser';
+import UserList from './components/Users/UserList';
+
 function App() {
   return (
     <div>
-      <h2>Let's get started!</h2>
+      <AddUser />
+      <UserList users={[]} />
     </div>
   );
 }
