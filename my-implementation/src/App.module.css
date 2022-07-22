@@ -1,8 +1,10 @@
 .container {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   margin: inherit auto;
   width: 100vw;
   height: 100vh;
+  gap: 50px;
 }

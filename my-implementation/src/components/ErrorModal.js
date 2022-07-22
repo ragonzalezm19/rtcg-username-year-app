@@ -1,6 +1,10 @@
 import styles from './ErrorModal.module.css';
 
-const ErrorModal = () => {
+const ErrorModal = ({ error, onClose }) => {
+  const onClickHandler = () => {
+    onClose();
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.modal}>
@@ -8,10 +12,13 @@ const ErrorModal = () => {
           <h2>Invalid input </h2>
         </div>
         <div className={styles['modal__body']}>
-          <p>Please enter a valid age ({'>'} 0).</p>
+          <p>{error}</p>
         </div>
         <div className={styles['modal__bottom']}>
-          <button type='button' className={styles['modal__button']}>
+          <button
+            type='button'
+            onClick={onClickHandler}
+            className={styles['modal__button']}>
             Okay
           </button>
         </div>
